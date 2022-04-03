@@ -24,7 +24,6 @@ public class Main {
 				for (int i = 0; i < opCodes.length; i++){
 					displayResult(opCodes[i], leftVals[i], rightVals[i], results[i]);
 				}
-
 				break;
 			case 1:
 				executeInteractively();
@@ -89,7 +88,6 @@ public class Main {
 		} else {
 			double leftVal = valueFromWord(args[1]);
 			double rightVal = valueFromWord(args[2]);
-
 			double result = performOperation(opCode, leftVal, rightVal);
 			displayResult(opCode, leftVal, rightVal, result);
 		}
@@ -106,7 +104,6 @@ public class Main {
 		} else {
 			double leftVal = valueFromWord(args[1]);
 			double rightVal = valueFromWord(args[2]);
-
 			double result = performOperation(opCode, leftVal, rightVal);
 			displayResult(opCode, leftVal, rightVal, result);
 		}
@@ -115,11 +112,8 @@ public class Main {
 	private static void handleWhen(String[] args) {
     	LocalDate startDate = LocalDate.parse(args[1]);
     	long daysToAdd = Integer.parseInt(args[2]);
-
     	LocalDate result = startDate.plusDays(daysToAdd);
-
     	System.out.printf("Date after %d days from %s is %s", daysToAdd, startDate.toString(), result.toString());
-
 	}
 
 	private static char opCodeFromWord(String arg) {
